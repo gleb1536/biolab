@@ -1,0 +1,26 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+        $('.delete').click(remove);
+      });
+    function add() {
+        $('#motor').append('<tr>        <td><input type="button" class="delete" value="-"/></td>        <td>                    <input type="time" name="begtime" >                </td><td>                    <input type="time" name="endtime">                </td><td>                    <input name="speed" ></td>            </tr>');
+    }
+    function remove() {
+        $(this).parents('tr').first().remove();
+        alert($(this).parent().parent().name());
+    }
+  </script>
+</head>
+<body>
+  <center>
+    <form  method="get">
+    <table id="motor">                                                                                                                         
+        <tr>                                                                                                                                   
+            <td></td><td>Время начала</td><td>Время окончания</td><td>Скорость </td>                                                           
+        </tr>                                                                                                                                  
+        

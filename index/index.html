@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="utf-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script>
+            <!--
+            function plus(id)
+            {
+                var percent = 0; 
+                switch(id)
+                {
+                    case 1:
+                    percent = document.id1.percent.value;
+                    break;
+                    case 2:
+                    percent = document.id2.percent.value;
+                    break;
+                }
+                alert(percent);
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", "/?id="+id+"&percent="+percent, false ); // false for synchronous request
+                xmlHttp.send(null);
+            }
+            function CheckAge(age)
+            {
+                if(age<18)
+                    return "18";
+                else
+                    return  age;
+            }
+            //-->
+        </script>
+    </head>
+    <body>
+        <center>
+            <form  name="id1">
+                <input  type="text" name="percent" value='0'>
+                <input type="button" value="+" onClick="plus(1);">
+                <input type="button" value="-" onClick="minus(1);">
+            </form>
+            <form  name="id2">
+                <input  type="text" name="percent" value='0'>
+                <input type="button" value="+" onClick="plus(2);">
+                <input type="button" value="-" onClick="minus(2);">
+            </form>
+        </center>
+    </body>
+</html>
